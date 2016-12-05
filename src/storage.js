@@ -26,6 +26,6 @@ function createStorage(storage) {
   };
 }
 
-export const local = createStorage(chrome.storage.local);
-export const sync = createStorage(chrome.storage.sync);
-export default local;
+export const localStorage = createStorage(chrome.storage.local);
+export const syncStorage = createStorage(chrome.storage.sync);
+export default localStorage;
