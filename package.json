@@ -34,7 +34,7 @@
     "rimraf": "^2.3.4"
   },
   "dependencies": {
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.5",
     "redux-persist-crosstab": "^1.0.1"
   },
   "peerDependencies": {
