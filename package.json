@@ -10,8 +10,9 @@
     "preversion": "npm run clean && npm run check",
     "version": "npm run build",
     "postversion": "git push && git push --tags && npm run clean",
-    "prepublish": "npm run clean && npm run build",
-    "test": "eslint ."
+    "prepublish": "npm run snyk-protect; npm run clean && npm run build",
+    "test": "eslint .",
+    "snyk-protect": "snyk protect"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.5",
-    "redux-persist-crosstab": "^1.0.1"
+    "redux-persist-crosstab": "^1.0.1",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "redux-persist": "3.5.x"
@@ -44,5 +46,6 @@
     "zalmoxisus <zalmoxisus@gmail.com>",
     "rt2zz <zack@root-two.com>"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
